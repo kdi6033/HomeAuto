@@ -61,7 +61,7 @@ void setup() {
   // preparing sonoff GPIOs
   pinMode(gpio13Led, OUTPUT);
   digitalWrite(gpio13Led, HIGH);
-    pinMode(gpio12Relay, OUTPUT);
+  pinMode(gpio12Relay, OUTPUT);
   digitalWrite(gpio12Relay, HIGH);
   
   Serial.begin(9600);
@@ -70,7 +70,7 @@ void setup() {
   /* You can remove the password parameter if you want the AP to be open. */
   String ss;
   sAP_ssid=String(softAP_ssid)+String(ESP.getChipId(),HEX);
-  sAP_ssid.toCharArray(cAP_ssid,sAP_ssid.length());
+  sAP_ssid.toCharArray(cAP_ssid,sAP_ssid.length()+1);
   softAP_ssid=&cAP_ssid[0];
   Serial.println(softAP_ssid);
   WiFi.softAPConfig(apIP, apIP, netMsk);
