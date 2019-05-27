@@ -21,7 +21,7 @@ MDNSResponder mdns;
  * 프로토콜은 {"name": sChipID, "gate":1, "motor":1}*/
 
  /* AP 설정을 위한 변수 선언 */
-const char *softAP_ssid = "i2r_ap_";
+const char *softAP_ssid = "i2r_ap_light_";
 const char *softAP_password = "00000000";
 String sAP_ssid,sChipID;
 char cAP_ssid[20];
@@ -60,8 +60,8 @@ float fO2,fTemp;
 
 // mqtt를 위한 설정
 const char* mqtt_server = "broker.mqtt-dashboard.com";
-const char* outTopic = "/i2r_sonoff99/inTopic";
-const char* inTopic = "/i2r_sonoff99/outTopic";
+const char* outTopic = "/i2r_sonoff/inTopic";
+const char* inTopic = "/i2r_sonoff/outTopic";
 const char* clientName = ""; // AP 이름과 같이 사용
 int no=1; //기기번호
 
