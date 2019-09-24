@@ -15,6 +15,7 @@ String webPage = "";
 
 int gpio13Led = 13;
 int gpio12Relay = 12;
+int tick=0;
 
 void setup(void){
   webPage += "<h1>SONOFF Web Server</h1><p><a href=\"on\"><button>ON</button></a>&nbsp;<a href=\"off\"><button>OFF</button></a></p>";  
@@ -66,5 +67,11 @@ void setup(void){
  
 void loop(void){
   server.handleClient();
+  if(tick>500) {
+    tick=0;
+    Serial.println("IP address: ");
+    Serial.println(WiFi.localIP());
+  }
+  delay(10);
+  tick++;
 } 
-
