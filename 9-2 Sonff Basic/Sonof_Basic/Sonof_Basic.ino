@@ -15,5 +15,5 @@ void loop() {
   digitalWrite(gpio12Relay, HIGH);
   delay(2000);
   digitalWrite(gpio13Led, LOW);
-  digitalWrite(gpio12Relay, LOW);;
+  digitalWrite(gpio12Relay, LOW);
 }
